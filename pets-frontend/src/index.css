@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: "Alien";
+  src: url("Alien.otf");
+}
+
+@font-face{
+  font-family:"Stormblade";
+  src: url("Stormblade.otf");
+}
