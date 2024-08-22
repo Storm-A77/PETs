@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.memory-game{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 100px;
+}
+
+.card{
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+
+.card img {
+  width: 100%;
+  height: 100px;
+  display: block;
+  border: 2px solid purple;
+  border-radius: 5px;
+}
+
+
+.card .front{
+  transform: rotateY(90deg);
+  transition: all ease-in 0.2s;
+  position: absolute;
+}
+
+.flipped .front{
+  transform: rotateY(0deg);
+  transition-delay: 0.2s;
+}
+
+.card .back{
+  transition: all ease-in 0.2s;
+  transition-delay: 0.2s;
+}
+
+.flipped .back{
+  transform: rotateY(90deg);
+  transition-delay: 0s;
+}
+
+.disappear{
+  opacity: 1;
+  animation-delay: 1s;
+  animation-name: vanish;
+}
+
+@keyframes vanish {
+to{
+opacity: 0;
+}
+}
